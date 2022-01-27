@@ -1,0 +1,22 @@
+class Solution {
+    int[][] sortedMatrix(int n, int m[][]) {
+        // code here
+        ArrayList<Integer> l=new ArrayList<Integer>();
+      //  l.add(new ArrayList<Integer>(m));
+      for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                l.add(m[i][j]);
+               
+        }
+        }
+        Collections.sort(l);
+        int k=0;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                m[i][j]=l.get(k);
+                k++;
+        }
+        }
+        return m;
+    }
+};
